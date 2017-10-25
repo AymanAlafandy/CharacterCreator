@@ -19,7 +19,7 @@ namespace CharacterCreator
 
             //another way
 
-            Sentient orc = new Sentient(200, 80, "Bill", 20);
+            NonSentient orc = new NonSentient(200, 80, "Bill", false);
             Race human = new Race(10, 10, "Thomas");
             Console.WriteLine(orc.PrintRace());
             Console.ReadLine();
