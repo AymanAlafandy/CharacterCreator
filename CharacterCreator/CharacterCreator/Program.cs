@@ -10,6 +10,9 @@ namespace CharacterCreator
     {
         static void Main(string[] args)
         {
+            CharacterCreator CallingMain = new CharacterCreator();
+            CallingMain.mainmenu();
+
         }
     }
 }
