@@ -25,7 +25,16 @@ namespace CharacterCreator
 
         public override string PrintRace()
         {
-            return base.PrintRace() + "\nBallon";
+            string output = base.PrintRace();
+            if(tame)
+            {
+                output = "This is a tame X\n" + output;
+            }
+            else
+            {
+                output = "This is a wild X\n" + output;
+            }
+            return output;
         }
     }
 }

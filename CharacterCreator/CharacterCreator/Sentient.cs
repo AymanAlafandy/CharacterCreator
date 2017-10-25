@@ -20,13 +20,16 @@ namespace CharacterCreator
         public Sentient(int str, int sta, string nam, int intel) :
             base(str, sta, nam)
         {
+            Strength = Strength * 2;
             Intelligence = intel;
         }
 
-        public string boom()
+        public virtual int CalculateNumberOfLanguages(int mod = 0)
         {
-            return "BOOM";
+            return (Intelligence + mod) % 3;
         }
+
+        
         public override string PrintRace()
         {
             return base.PrintRace()+ "\nWith an intelligence of "+Intelligence;

@@ -10,7 +10,7 @@ namespace CharacterCreator
     {
         public void MainMenu()
         {
-            Race[] party = new Race[3];
+            Race[,] party = new Race[2, 3];
 
             Sentient elf = new Sentient();
             elf.Strength = 53;
@@ -19,11 +19,16 @@ namespace CharacterCreator
             elf.Intelligence = 200;
 
             NonSentient orc = new NonSentient(200, 80, "Bill", false);
-            Race human = new Race(10, 10, "Deidré");
-            party[0] = elf;
-            party[1] = orc;
-            party[2] = human;
-            Console.WriteLine(party[1].PrintRace());
+            Race human = new Human(10, 10, "Deidré", 90);
+
+            party[0,0] = elf;
+            party[0,1] = orc;
+            party[0,2] = human;
+
+            Console.WriteLine("You are playing as a " +
+                party[0,2].GetType().Name + "\n" +
+                party[0,2].PrintRace());
+            
             Console.ReadLine();
         }
     }
