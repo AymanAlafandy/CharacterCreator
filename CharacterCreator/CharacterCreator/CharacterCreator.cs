@@ -12,6 +12,7 @@ namespace CharacterCreator
         //we creat method
         public void MainMenu()
         {
+            Race[] party = new Race[3];
             Sentient elf = new Sentient();
             elf.Strength = 53;
             elf.Stamina = 106;
@@ -21,7 +22,10 @@ namespace CharacterCreator
 
             NonSentient orc = new NonSentient(200, 80, "Bill", false);
             Race human = new Race(10, 10, "Thomas");
-            Console.WriteLine(orc.PrintRace());
+            party[0] = elf;
+            party[1] = orc;
+            party[2] = human;
+            Console.WriteLine(party[2].PrintRace());
             Console.ReadLine();
         }
     }
