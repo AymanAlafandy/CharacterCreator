@@ -6,12 +6,7 @@ using System.Threading.Tasks;
 
 namespace CharacterCreator
 {
-    class Program
+    class Sentient
     {
-        static void Main(string[] args)
-        {
-            CharacterCreator cc = new CharacterCreator();
-            cc.MainMenu();
-        }
     }
 }
