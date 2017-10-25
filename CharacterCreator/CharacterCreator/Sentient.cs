@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CharacterCreator
 {
-    class Sentient
+    class Sentient : Race //we want our class to inheritence from race class
     {
     }
 }
