@@ -19,9 +19,9 @@ namespace CharacterCreator
 
             //another way
 
-            Race orc = new Race(200, 80, "Bill");
+            Sentient orc = new Sentient(200, 80, "Bill");
             Race human = new Race(10, 10, "Thomas");
-            Console.WriteLine(elf.PrintRace());
+            Console.WriteLine(orc.PrintRace());
             Console.ReadLine();
         }
     }
