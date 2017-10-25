@@ -50,11 +50,14 @@ namespace CharacterCreator
             Name = nam;
         }
 
-        public string Printrace()
+        public virtual string Printrace()  //virtual class creates in parent class and override class creates in base/child classes
 
         {
-            return "You play as" + Name + "\nStrength is" + Strength + "Your stamina is" + Stamina + ".";
+            return "You play as" + Name + "\nStrength is" + Strength + "\nYour stamina is" + Stamina + ".";
+        }
+
+
         }
 
     }
-}
+
