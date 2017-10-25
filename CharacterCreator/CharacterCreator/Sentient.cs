@@ -17,10 +17,19 @@ namespace CharacterCreator
         }
 
         public Sentient() { }
-        public Sentient(int str, int sta, string nam, int inte) :
+        public Sentient(int str, int sta, string nam, int intel) :
             base(str, sta, nam)
         {
-            Intelligence = inte;
+            Intelligence = intel;
+        }
+
+        public string boom()
+        {
+            return "BOOM";
+        }
+        public override string PrintRace()
+        {
+            return base.PrintRace()+ "\nWith an intelligence of "+Intelligence;
         }
     }
 }
