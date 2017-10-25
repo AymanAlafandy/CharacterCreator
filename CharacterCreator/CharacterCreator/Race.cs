@@ -78,7 +78,7 @@ namespace CharacterCreator
        
         }
 
-        public string PrintRace()
+        public virtual string PrintRace()
         {
             return "You play as " + Name + "\nYour strength is " +
                 Strength + ".\nYour stamina is " + Stamina + ".";
