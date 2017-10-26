@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CharacterCreator
 {
-    class CharacterCreator //it 
+    class CharacterCreator // Create inherite class
 
     {
         public void MainMenu()
