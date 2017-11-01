@@ -19,6 +19,7 @@ namespace CharacterCreator
             elf.Name = "Snapp";
             elf.Intelligence = 200;
 
+
             NonSentient orc = new NonSentient(200, 80, "Bill",false);
             Human human = new Human(10, 10, "Deidré", 90);
             Race ka ;
