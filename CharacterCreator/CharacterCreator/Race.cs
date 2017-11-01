@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace CharacterCreator
 {
     public class Race
-    {
+    {     
         private int strength;  // creating a private field
         private int stamina;
         private string name;
