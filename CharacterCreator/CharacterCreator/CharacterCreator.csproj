@@ -43,9 +43,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CharacterCreator.cs" />
+    <Compile Include="Human.cs" />
+    <Compile Include="NonSentient.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Race_mosh.cs" />
+    <Compile Include="Sentient.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

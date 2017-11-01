@@ -28,9 +28,9 @@ namespace CharacterCreator
             stamina = sta;
 
         }
-        public string PrintRace()
+        public virtual string PrintRace()
         {
-            return "You play as " + Name + "\nYour strength is " + Strength + "\nYour stamina is  " + stamina;
+            return "You play as " + Name + "\nYour strength is " + Strength + "\nYour stamina is  " + Stamina;
         }
 
     }
