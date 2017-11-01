@@ -9,8 +9,8 @@ namespace CharacterCreator.CharacterRaces
     public class Human : Sentient
     {
         public Human() { }
-        public Human(int str, int sta, string nam, int intel):
-            base(str, sta, nam, intel)
+        public Human(int str, int sta, string nam, int intel, int cha):
+            base(str, sta, nam, intel, cha)
         {
             Strength += 5;
             Stamina += intel;

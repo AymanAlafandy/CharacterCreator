@@ -46,6 +46,7 @@
     <Compile Include="CharacterRaces\Dog.cs" />
     <Compile Include="CharacterRaces\Human.cs" />
     <Compile Include="CharacterRaces\NonSentient.cs" />
+    <Compile Include="PartCreation\Party.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="CharacterRaces\Race.cs" />
