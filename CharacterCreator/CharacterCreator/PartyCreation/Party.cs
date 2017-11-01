@@ -23,6 +23,7 @@ namespace CharacterCreator.PartyCreation
 
         public Party(T input)
         {
+
             if (typeof(Sentient).IsAssignableFrom(input.GetType())) //type of return the acutal type value
             {     //input.GetType().Name == "Human"
                 //partyArray = new T[((input as Sentient).Charisma % 5) +3 ];
