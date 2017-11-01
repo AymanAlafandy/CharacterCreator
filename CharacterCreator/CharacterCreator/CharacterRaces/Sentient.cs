@@ -9,19 +9,28 @@ namespace CharacterCreator.CharacterRaces
     public class Sentient : Race
     {
         private int intelligence;
+        private int charisma;
+
+
 
         public int Intelligence
         {
             get { return intelligence; }
             set { intelligence = value; }
         }
+        public int Charisma
+        {
+            get { return charisma; }
+            set { charisma = value; }
+        }
 
         public Sentient() { }
-        public Sentient(int str, int sta, string nam, int intel) :
+        public Sentient(int str, int sta, string nam, int intel, int cha) :
             base(str, sta, nam)
         {
             Strength = Strength * 2;
             Intelligence = intel;
+            Charisma = cha;
         }
         
         public virtual int CalculateNumberOfLanguages(int mod = 0)
