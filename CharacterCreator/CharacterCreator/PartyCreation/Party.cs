@@ -47,7 +47,21 @@ namespace CharacterCreator.PartyCreation
             if (id != 0 && id <= capacity)
             {
                 partyArray[id] = null;
-                count--;
+                if (id+1 != capacity)
+                {
+                    for(int i = partyArray.ToList().IndexOf(null); i<capacity; i++)
+                    {
+                        if (partyArray[i+1] != null && i+1 != capacity)
+                        {
+                            partyArray[i] = partyArray[i + 1];
+                        }
+                        else
+                        {
+                            partyArray[i] = null;
+                        }
+                    }
+                }
+                //count--;
             }
         }
 
