@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CharacterCreator.CharacterRaces
+namespace CharacterCreator.CharacterRaces    //it called I hade ullterd the namespace to be match
 {
     public class Dog : NonSentient
     {
