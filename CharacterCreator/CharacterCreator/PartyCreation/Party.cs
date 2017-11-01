@@ -16,6 +16,10 @@ namespace CharacterCreator.PartyCreation
         private T[] partyArray;     //this is an array and not list
         private int capacity;  //how large is our array is
         private int count;                        //how many fiels in this array we want to fill
+        
+        public int Capacity { get { return capacity; } } //we removed the set because we do not want the user to set the number of capacity
+
+        public int Count { get { return count; } private set { count = value; } }           
 
         public Party(T input)
         {
@@ -28,9 +32,8 @@ namespace CharacterCreator.PartyCreation
             else
             {
                 partyArray = new T[1];
-                partyArray = new T[1];
             }
-            partyArray[0] = input; //that's mean if the array is sentient we still have 2 places du to +3
+            partyArray[0] = input; //that's mean if the array is sentient we still have 2 places u to +3
             count = 1;
         }
 
@@ -44,12 +47,12 @@ namespace CharacterCreator.PartyCreation
         }
         public void Fire ( int id)
         {
-            if (id != 0 && id <= capacity)
+            if (id != 0 && id <= capacity && partyArray[id] != null)
             {
-                partyArray[id] = null;
+                //partyArray[id] = null;
                 if (id+1 != capacity)
                 {
-                    for(int i = partyArray.ToList().IndexOf(null); i<capacity; i++)
+                    for(int i = id/*partyArray.ToList().IndexOf(null)*/; i < capacity; i++)
                     {
                         if (partyArray[i+1] != null && i+1 != capacity)
                         {
@@ -59,20 +62,31 @@ namespace CharacterCreator.PartyCreation
                         {
                             partyArray[i] = null;
                         }
+                        count--;
                     }
                 }
                 //count--;
+            }
+            else
+            {
+                partyArray[id] = null;
             }
         }
 
         public IEnumerator<T> GetEnumerator()       //we implement the interface and that must be do every time.
         {
-            throw new NotImplementedException();
-        }
+            //throw new NotImplementedException();
+            for(int i = 0; i < count; i++)   //we use count and not capaciti because we do not want to hite a null value
+            {
+                yield return partyArray[i];   //yield: each value get return to the program, untill hitt all the values
+            }                                 //when you inherite IEnumerable then it is recommanded to use yield
+
+         }
 
         IEnumerator IEnumerable.GetEnumerator()
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            return GetEnumerator();
         }
     }                                         
 }

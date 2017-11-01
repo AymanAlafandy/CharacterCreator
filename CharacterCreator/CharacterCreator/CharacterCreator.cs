@@ -23,7 +23,7 @@ namespace CharacterCreator
 
 
             NonSentient orc = new NonSentient(200, 80, "Bill",false);
-            Human human = new Human(10, 10, "Deidré", 90,110);
+            Human human = new Human(10, 10, "Deidré", 90,111);
             //Race ka ;
             //ka = human;
             //party[0,0] = elf;
@@ -33,13 +33,24 @@ namespace CharacterCreator
             //Console.WriteLine("You are playing as a " +
             //    party[0,2].GetType().Name + "\n" + 
             //    party[0,2].PrintRace());
-
+            Dog dog = new Dog(1,2,"Chuchu",false);
 
             Party<Race> party;
             party = new Party<Race>(human);
-            party = new Party<Race>(elf);
-            party = new Party<Race>(orc);
+            //party = new Party<Race>(elf);
+            //party = new Party<Race>(orc);
+            
+            party.Hire(elf);
             party.Hire(human);
+            //party.Fire(2);
+            party.Hire(dog);
+
+            foreach (var race in party)
+            {
+                Console.WriteLine(race.PrintRace()+"\n--------------\n");
+            }
+
+            Console.ReadLine();
             Console.WriteLine(human.CalculateNumberOfLanguages());
             Console.ReadLine();
         }
