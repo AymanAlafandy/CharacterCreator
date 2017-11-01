@@ -10,15 +10,20 @@ namespace CharacterCreator
     {
         public void mainmenu()
         {
-
-            Race elf = new Race();
+            Race[] party = new Race[3];
+            Sentient elf = new Sentient();
             elf.Strength = 53;
             elf.Stamina = 106;
             elf.Name = "My Elf";
 
-            Race orc = new Race(200, 80, "KIller");
+            Race orc = new Race(200, 80, "Killer");
             Race Human = new Race(2000, 5000, "Kunal");
+            party[0] = elf;
+            party[1] = orc;
+            party[3] = Human ;
 
+
+            Console.WriteLine(party[1].PrintRace());
             Console.WriteLine(Human.PrintRace());
             Console.ReadLine();
 

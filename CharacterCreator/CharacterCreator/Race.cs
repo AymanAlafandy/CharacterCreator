@@ -31,7 +31,7 @@ namespace CharacterCreator
 
         }
 
-        public string PrintRace()
+        public virtual string PrintRace()
         {
             Console.WriteLine("==================================================");
             Console.WriteLine("==================================================");
