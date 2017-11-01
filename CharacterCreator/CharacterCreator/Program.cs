@@ -12,6 +12,7 @@ namespace CharacterCreator
         {
             CharacterCreator cc = new CharacterCreator();
             cc.MainMenu();
+            
         }
     }
 }
