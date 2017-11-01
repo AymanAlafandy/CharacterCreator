@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CharacterCreator.cs" />
+    <Compile Include="CharacterRaces\Dog.cs" />
     <Compile Include="CharacterRaces\Human.cs" />
     <Compile Include="CharacterRaces\NonSentient.cs" />
     <Compile Include="Program.cs" />
