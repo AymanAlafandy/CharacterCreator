@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CharacterCreator
 {
-    class Sentient : Race //we want our class to inheritence from race class
+    public class Sentient : Race //we want our class to inheritence from race class
     {
         private int intelligence;
 
@@ -17,8 +17,15 @@ namespace CharacterCreator
         //base is a tool to go one step upp.
         //we do not have to repeat the constractor information again.
         {
+            Strength = Strength * 2;
             Intelligence = inte;
         }
+
+        public virtual int CalculateNumberOfLanguages(int mod = 0)
+        {
+            return (Intelligence + mod) % 3;
+        }
+
         public override string PrintRace()
         {
  
