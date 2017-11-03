@@ -42,8 +42,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="CharacterCreator.cs" />
+    <Compile Include="Human.cs" />
+    <Compile Include="NonSentient.cs" />
+    <Compile Include="..\..\..\..\..\Desktop\Exercise\Program.cs">
+      <Link>Program.cs</Link>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Race.cs" />
+    <Compile Include="Sentient.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
