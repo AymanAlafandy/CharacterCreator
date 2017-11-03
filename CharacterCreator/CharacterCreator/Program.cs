@@ -11,8 +11,7 @@ namespace CharacterCreator
         static void Main(string[] args)
         {
             CharacterCreator cc = new CharacterCreator();
-            cc.MainMenu();
-            
+            cc.MainMenu();           
         }
     }
 }

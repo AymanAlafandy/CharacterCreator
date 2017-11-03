@@ -35,15 +35,37 @@ namespace CharacterCreator.PartyCreation
             partyArray = new T[1];
         }
 
+        public void Fire(int Id)
+        {
+            if(Id != 0 && Id >= capacity)
+            {
+                partyArray[Id] = null;
+                if(Id+1 != capacity)
+                {
+
+                    for (int i =partyArray.ToList().IndexOf(null); i<capacity;i++)
+                    {
+
+                    }
+                }
+
+            }
+
+
+        }
 
         public IEnumerator<T> GetEnumerator()
         {
-            throw new NotImplementedException();
+            for (int i = 0; i < count; i++)
+            {
+                yield return partyArray[i];
+            }
+            
         }
 
         IEnumerator IEnumerable.GetEnumerator()
         {
-            throw new NotImplementedException();
+            return GetEnumerator();
         }
     }
 }
