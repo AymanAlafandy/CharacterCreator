@@ -51,7 +51,7 @@ namespace CharacterCreator.PartyCreation
              */
             if (typeof(Sentient).IsAssignableFrom(input.GetType()))
             {
-                capacity = ((input as Sentient).Charisma % 5) + 3;
+                capacity = ((input as Sentient).Charisma % 3) + 3;
                 partyArray = new T[capacity];
             }
             /*
