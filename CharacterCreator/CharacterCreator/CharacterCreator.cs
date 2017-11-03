@@ -23,6 +23,11 @@ namespace CharacterCreator
 
             NonSentient orc = new NonSentient(200, 80, "Bill", false);
             Human human = new Human(10, 10, "Deidré", 90, 111);
+            NonSentient orc2 = new NonSentient(160, 180, "Bull", true);
+            Human human2 = new Human(30, 30, "Joe", 50, 12);
+            NonSentient orc3 = new NonSentient(35, 10, "old-Bob", false);
+            Human human3 = new Human(1100, 1100, "Clark kent", 60, 2000);
+            Human human4 = new Human(100, 100, "Flark Fent", 600, 2000);
             //Race ka ;
             //ka = human;
             //party[0,0] = elf;
@@ -33,21 +38,42 @@ namespace CharacterCreator
             //    party[0,2].GetType().Name + "\n" + 
             //    party[0,2].PrintRace());
             Dog dog = new Dog(1, 2, "Chuchu", false);
-            Party<Race> party;
+            Dog dog2 = new Dog(10, 10, "Fido", true);
+            Party<Sentient> party;
             //party = new Party<Race>(orc);
-            party = new Party<Race>(human);
+            party = new Party<Sentient>(human);
             //party = new Party<Race>(elf);
-            party.Hire(elf);
+            //party.Hire(orc);
             party.Hire(human);
-            //party.Fire(2);
-            party.Hire(dog);
-
-            foreach(var race in party)
+            //party.Hire(orc2);
+            party.Hire(human2);
+            //party.Hire(orc3);
+            party.Hire(human3);
+            party.Hire(human4);
+            //party.Hire(elf);
+            //party.Hire(dog);
+            foreach (var race in party)
             {
-                Console.WriteLine(race.PrintRace()+"\n--------------------------------\n");
+                Console.WriteLine(race.PrintRace() + "\n--------------------------------\n");
             }
             Console.ReadLine();
-            Console.WriteLine(human.CalculateNumberOfLanguages());
+            Console.Clear();
+
+            Console.WriteLine(party.OrderByDescending(x => x.Strength).FirstOrDefault().PrintRace());
+            //orderbyDescending is a lambda expression it takes some parameter and according 
+            //to this parameter it sorts the list
+            //firstordefault make sure that it doesn't crash, it returs also null
+            //Console.WriteLine(human.CalculateNumberOfLanguages());
+            Console.ReadLine();
+            Console.Clear();
+
+
+            foreach (var race in party.Where(x => x.Name.ToUpper().Contains("A") || x.Intelligence < 80).OrderBy(x => x.Name).OrderBy(x => x.Charisma))   
+                //we want to find names start with B (we use lambda expression)
+            {
+                  Console.WriteLine(race.PrintRace() + "\n--------------------------------\n");
+            }
+             
             Console.ReadLine();
         }
     }
