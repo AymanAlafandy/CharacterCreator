@@ -51,7 +51,7 @@ namespace CharacterCreator.PartyCreation
              */
             if (typeof(Sentient).IsAssignableFrom(input.GetType()))
             {
-                capacity = ((input as Sentient).Charisma % 5) + 3;
+                capacity = ((input as Sentient).Charisma % 3) + 7;
                 partyArray = new T[capacity];
             }
             /*
@@ -131,6 +131,11 @@ namespace CharacterCreator.PartyCreation
         IEnumerator IEnumerable.GetEnumerator()
         {
             return GetEnumerator();
+        }
+
+        public static implicit operator Party<T>(Party<Sentient> v)
+        {
+            throw new NotImplementedException();
         }
     }
 }
