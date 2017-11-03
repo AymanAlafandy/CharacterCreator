@@ -33,12 +33,18 @@ namespace CharacterCreator
             //    party[0,2].GetType().Name + "\n" + 
             //    party[0,2].PrintRace());
             Dog dog = new Dog(1, 2, "Chuchu", false);
+            Dog dog2 = new Dog(10, 10, "Fido", true);
             Party<Race> party;
             //party = new Party<Race>(orc);
             party = new Party<Race>(human);
             //party = new Party<Race>(elf);
             party.Hire(elf);
             party.Hire(human);
+            party.Hire(dog);
+            party.Hire(orc2);
+            party.Hire(human2);
+            party.Hire(orc2);
+            party.Hire(human3);
             //party.Fire(2);
             party.Hire(dog);
 
@@ -47,7 +53,8 @@ namespace CharacterCreator
                 Console.WriteLine(race.PrintRace()+"\n--------------------------------\n");
             }
             Console.ReadLine();
-            Console.WriteLine(human.CalculateNumberOfLanguages());
+            Console.WriteLine(party.OrderByDescending(x => x.Strength).FirstOrDefault().PrintRace());
+            //Console.WriteLine(human.CalculateNumberOfLanguages());
             Console.ReadLine();
         }
     }
