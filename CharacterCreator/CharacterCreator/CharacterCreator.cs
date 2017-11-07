@@ -67,6 +67,7 @@ namespace CharacterCreator
             foreach (var race in party.Where(x => x.Name.ToUpper().Contains("A") || x.Intelligence< 80).OrderBy(x=> x.Name).OrderBy(x => x.Charisma))
             {
                 Console.WriteLine(race.PrintRace()+"\n--------------------------------\n");
+
             }
 
             //Console.WriteLine(human.CalculateNumberOfLanguages());
