@@ -42,8 +42,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CharacterCreator.cs" />
+    <Compile Include="CharacterRaces\Dog.cs" />
+    <Compile Include="CharacterRaces\Human.cs" />
+    <Compile Include="CharacterRaces\NonSentient.cs" />
+    <Compile Include="PartyCreation\Party.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CharacterRaces\Race.cs" />
+    <Compile Include="CharacterRaces\Sentient.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
